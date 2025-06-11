@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Zihao Fu</title>
 		<meta name="description" content="I am writing about my experiences as a naval navel-gazer.">
+		<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Uni_Oxford_logo.svg" type="image/svg+xml">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Eleventy Base Blog v9">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css">
@@ -133,17 +134,23 @@
           <i class="bx bxs-bank"></i>
           <b>The Chinese University of Hong Kong</b>
         </div>
-        <div class="light-text">Research Assistant Professor</div>
+        <div class="light-text"><a href="https://ling.cuhk.edu.hk/people/faculty-linguistics/fu-zihao/" target="_blank">Research Assistant Professor</a></div>
       <p></p>
+    </div>
+    <div class="flex justify-between pointer copy-btn" x-data="{mail: atob('emloYW9mdUBjdWhrLmVkdS5oaw==')}" @click="(e)=>navigator.clipboard.writeText(mail) && console.log('copied')">
+      <span x-text="mail"></span>
+      <i class="bx bxs-copy"></i>
+    </div>
+    <div class="tj f6 mt2">
       <p>
         </p><div>
           <i class="bx bxs-bank"></i>
           <b>University of Cambridge</b>
         </div>
-        <div class="light-text">Affiliated Lecturer</div>
+        <div class="light-text"><a href="https://ltl.mmll.cam.ac.uk/people" target="_blank">Affiliated Lecturer</a></div>
       <p></p>
     </div>
-    <div class="flex justify-between pointer copy-btn" x-data="{mail: atob('emloYW9mdUBjdWhrLmVkdS5oaw==')}" @click="(e)=>navigator.clipboard.writeText(mail) && console.log('copied')">
+    <div class="flex justify-between pointer copy-btn" x-data="{mail: atob('emYyNjhAY2FtLmFjLnVr')}" @click="(e)=>navigator.clipboard.writeText(mail) && console.log('copied')">
       <span x-text="mail"></span>
       <i class="bx bxs-copy"></i>
     </div>
@@ -193,14 +200,16 @@
   <h1 id="zihao-fu-2">Zihao Fu <span class="small-tips">(付子豪)</span></h1>
 <p>I am currently a Research Assistant Professor at The Chinese University of Hong Kong, conducting research on large language models and natural language processing, with a particular focus on interdisciplinary studies involving linguistics, psychology, and fairness. Additionally, I serve as an Affiliated Lecturer at the <a href="https://ltl.mmll.cam.ac.uk/">Language Technology Lab (LTL)</a> at the University of Cambridge. Before that I was a Postdoc Researcher in <a href="https://www.oii.ox.ac.uk/">Oxford Internet Institute</a>, University of Oxford collaborating with Prof. <a href="https://www.oii.ox.ac.uk/people/profiles/chris-russell/">Chris Russell</a>, Prof. <a href="https://www.oii.ox.ac.uk/people/profiles/brent-mittelstadt/">Brent Mittelstadt</a>, and Prof. <a href="https://www.oii.ox.ac.uk/people/profiles/sandra-wachter">Sandra Wachter</a>. Previously, I was a Research Associate in <a href="https://ltl.mmll.cam.ac.uk/">LTL</a>, University of Cambridge working with Prof. <a href="https://www.mmll.cam.ac.uk/nhc30">Nigel Collier</a>.</p>
 <p>My research mainly focuses on Natural Language Processing, Large Language Model, Text Generation, Machine Learning, Biomedical Applications, LLM Policy and etc. Before I came to Cambridge, I received my Ph.D. degree from The Chinese University of Hong Kong under the supervision of Prof. <a href="http://www.se.cuhk.edu.hk/people/academic-staff/prof-lam-wai/">Wai Lam</a>. I have also been a visiting student at the NLP Lab of Tsinghua University, working with Prof. <a href="http://nlp.csai.tsinghua.edu.cn/~lzy/">Zhiyuan Liu</a>. Before I started my Ph.D. study, I have three years of experience in developing large-scale distributed parallel algorithms for the <a href="https://www.alibabacloud.com/help/zh/machine-learning-platform-for-ai">PAI</a> platform in <a href="https://www.alibabacloud.com/">Alibaba Cloud</a>.</p>
-<p style="color:red;font-size:1.5rem;">Our group is hiring postdoctoral researchers and research assistants at CUHK and CUHK (Shenzhen). Check the <a href="/posts/2025-hire-detail">details</a>.</p>
+<p style="color:#dc322f;font-size:1.5rem;">Our group is hiring postdoctoral researchers and research assistants at CUHK and CUHK (Shenzhen). Remote collaboration is also welcome! Check the <a href="/posts/2025-hire-detail">details</a>.</p>
 <h2 id="education-and-research">Education &amp; Research</h2>
 <table id="table-edu">
   <tr>
     <td><a href="https://www.ox.ac.uk/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Uni_Oxford_logo.svg" alt="Oxford" width="22"></a></td>
     <td>2024-Now</td>
     <td>PostDoc</td>
-    <td><b>University of Oxford</b>, Oxford Internet Institute</td>
+    <td><b>University of Oxford</b>, Oxford Internet Institute, 
+    Advisor: <b><a href="https://www.oii.ox.ac.uk/people/profiles/chris-russell/">Prof. Chris Russell</a></b>
+    </td>
   </tr>
   <tr>
     <td><a href="https://www.cam.ac.uk/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Coat_of_Arms_of_the_University_of_Cambridge.svg/410px-Coat_of_Arms_of_the_University_of_Cambridge.svg.png" alt="Cambridge" width="20"></a></td>
@@ -251,6 +260,7 @@
   </tr>
 </table>
 <h2 id="publications">Publications</h2>
+<p>Kaivalya Rawal, <strong>Zihao Fu</strong>, Eoin Delaney, and Chris Russell. <a href="https://doi.org/10.1145/3715275.3732219">Evaluating Model Explanations without Ground Truth</a> (FAccT 2025)</p>
 <p>Eoin Delaney, <strong>Zihao Fu</strong>, Sandra Wachter, Brent Mittelstadt, Chris Russell <a href="https://arxiv.org/abs/2407.13710">OxonFair: A Flexible Toolkit for Algorithmic Fairness</a> (NeurIPS 2024)</p>
 <p><strong>Zihao Fu</strong>, Meiru Zhang, Zaiqiao Meng, Yannan Shen, David Buckeridge, Nigel Collier. <a href="https://arxiv.org/abs/2305.14480">BAND: Biomedical Alert News Dataset</a>. The 38th AAAI Conference on Artificial Intelligence (AAAI 2024).</p>
 <p><strong>Zihao Fu</strong>, Anthony Man-Cho So, Nigel Collier. <a href="https://arxiv.org/abs/2301.09820">A Stability Analysis of Fine-Tuning a Pre-Trained Model</a>. PrePrint</p>
