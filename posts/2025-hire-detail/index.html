@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>CUHK Hire Postdocs and RAs in LLMs, NLP, Linguistics, and Cognitive Science</title>
+		<meta name="description" content="I am writing about my experiences as a naval navel-gazer.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Eleventy Base Blog v9">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css">
+    <link rel="stylesheet" href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css" integrity="sha256-TBe0l9PhFaVR3DwHmA2jQbUf1y6yQ22RBgJKKkNkC50=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/brands.min.css" integrity="sha256-lvqQzfgRxG8QBB5QMqpZGrljg5T/hNmC3vC7i3zntlI=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/solid.min.css" integrity="sha256-ETbOOM9U8WfaXg2AkW2t+QbdpWYFRAO+HEXOth8EQbY=" crossorigin="anonymous">
+    <style>.main-container {
+  position: relative;
+}
+.main-content {
+  width: auto;
+  margin: 0;
+  padding: 1rem;
+}
+.namecard {
+  width: auto;
+  position: static;
+  padding: 1rem;
+}
+@media (width > 600px) {
+  .cf {
+    display: flex;
+    flex-direction: row;
+  }
+  .namecard {
+    position: sticky;
+    top: 0;
+    float: left;
+    min-width: 15rem;
+    width: 20%;
+  }
+  .main-content {
+    margin-left: max(15rem, 20%);
+  }
+}
+.namecard-container{
+  margin-top: 2rem;
+  line-height: 1.2;
+  font-size: 14px;
+}
+.avatar {
+  width: calc(100% - 1rem);
+  margin: 0 auto;
+  max-width: 15rem;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.avatar img {
+  display: block;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+.ref-links>ul {
+  padding: 0;
+  margin-top: 2rem;
+}
+.ref-links>ul>li {
+  list-style: none;
+  display: inline-block;
+}
+.opacity-and-small{
+  opacity: 0.3;
+  font-size: .7rem;
+}
+.copy-btn{
+  border-radius: 0.3rem;
+  padding: 0.5rem 0;
+}
+.copy-btn:hover{
+  padding: 0.5rem;
+  margin: 0 -0.5rem;
+  color: var(--color-ex-light);
+  background-color: var(--primary-color);
+}</style>
+    <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js" integrity="sha256-PtHu0lJIiSHfZeNj1nFd6wTX+Squ255SGZ/fc8seCtM=" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+    
+      <nav class="w-100 mb2 mt4">
+  <ul class="list pa0 ma0 flex flex-column flex-row-ns justify-center items-center">
+    <li class="pa2"><a class="link f5 fw6" href="/">Home</a></li>
+    <li class="pa2"><a class="link f5 fw6" href="/posts/2025-hire-detail">Posts</a></li>
+  </ul>
+</nav>
+    
+		</header>
+
+		<main id="skip" x-init="console.log('main init...')">
+			<heading-anchors>
+				
+
+
+<div class="main-container">
+  <div class="namecard">
+  
+
+
+
+
+<div class="namecard-container">
+  <div class="avatar-container">
+    <div class="avatar">
+      <img src="/imgs/avatar.jpg" alt="avatar" id="avatar">
+    </div>
+    <div class="mt1 mb3 pointer" x-init="console.log('name init')" @click="speak();">
+      <h1 class="flex items-center justify-center f3" id="zihao-fu">
+        <span class="pr2">Zihao Fu</span> 
+        <i class="bx bx-volume-full"></i>
+      </h1>
+    </div>
+  </div>
+  <div class="tj pt2">
+    <div class="tj f6 mt2">
+      <p>
+        </p><div>
+          <i class="bx bxs-bank"></i>
+          <b>The Chinese University of Hong Kong</b>
+        </div>
+        <div class="light-text">Research Assistant Professor</div>
+      <p></p>
+      <p>
+        </p><div>
+          <i class="bx bxs-bank"></i>
+          <b>University of Cambridge</b>
+        </div>
+        <div class="light-text">Affiliated Lecturer</div>
+      <p></p>
+    </div>
+    <div class="flex justify-between pointer copy-btn" x-data="{mail: atob('emloYW9mdUBjdWhrLmVkdS5oaw==')}" @click="(e)=>navigator.clipboard.writeText(mail) && console.log('copied')">
+      <span x-text="mail"></span>
+      <i class="bx bxs-copy"></i>
+    </div>
+  </div>
+  <div class="ref-links">
+    <ul class="flex justify-center items-center pa0 ma0 f3">
+      <li>
+        <a class="pa1 mh1 br3" href="https://twitter.com/fuzihaofzh" target="_blank">
+          <i class="bxl bx-twitter"></i>
+        </a>
+      </li>
+      <li class="p2">
+        <a class="pa1 mh1 br3" href="https://github.com/fuzihaofzh" target="_blank">
+          <i class="bxl bx-github"></i>
+        </a>
+      </li>
+      <li class="p2">
+        <a class="pa1 mh1 br3" href="https://scholar.google.com/citations?user=64CHB2YAAAAJ&amp;hl=en" target="_blank">
+          <i class="bx bxs-education"></i>
+        </a>
+      </li>
+      <li class="p2">
+        <a class="pa1 mh1 br3" href="mailto:zihaofu@cuhk.edu.hk" target="_blank">
+          <i class="bx bxs-envelope"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="ref-links">
+    <ul class="opacity-and-small">
+      <li><a class="e-social-link" href="https://scholar.google.com/citations?user=64CHB2YAAAAJ&amp;hl=en" target="_blank">
+      <span>GoogleScholar</span></a></li>
+      <li><a class="e-social-link" href="https://fuzihaofzh.github.io/blog/" target="_blank">
+      <span>GithubPage</span></a></li>
+      <li><a class="e-social-link" href="https://www.c2d3.cam.ac.uk/directory/35731/dr-zihao-fu" target="_blank">
+      <span>C2D3</span></a></li>
+      <li><a class="e-social-link" href="https://www.languagesciences.cam.ac.uk/staff/dr-zihao-fu" target="_blank">
+      <span>LanguageSciences</span></a></li>
+      <li><a class="e-social-link" href="https://www.infectiousdisease.cam.ac.uk/staff/zihao-fu" target="_blank">
+      <span>InfectiousDisease</span></a></li>
+    </ul>
+  </div>
+</div>
+  </div>
+
+  <div class="main-content tj">
+  <p>The Language Processing Lab at the Department of Linguistics and Modern Languages, The Chinese University of Hong Kong (CUHK) is now inviting applications for Postdoctoral Researchers and Research Assistants to join our interdisciplinary projects on <strong>Large Language Models (LLMs) × Linguistics / Psychology / Neuroscience / AI Ethics</strong>.</p>
+<p>Our research group is jointly led by scholars active in the fields of Natural Language Processing, Linguistics, Cognitive Science, and AI Ethics. We aim to explore the interpretability mechanisms of large language models, the relationship between language and cognition, and conduct theoretical analysis, system development, and experimental studies in these domains.</p>
+<h3 id="lab-introduction">Lab Introduction</h3>
+<p><strong>Zhenguang Cai</strong>, Professor at CUHK, PI of the Language Processing Lab. He obtained his PhD in Psychology from the University of Edinburgh and was a recipient of the “Future Research Leaders” award from the Economic and Social Research Council (UK). His research focuses on the cognitive mechanisms of language production and the behavioral and interpretability aspects of language models.</p>
+<p><strong>Zihao Fu</strong>, Research Assistant Professor at CUHK. He received his PhD from CUHK and previously conducted research on large language models and natural language processing at the Oxford Internet Institute and the Language Technology Lab at the University of Cambridge. His research interests include fine-tuning of large language models, interpretability analysis, and algorithmic fairness.</p>
+<h3 id="preferred-research-background">Preferred Research Background</h3>
+<p>We welcome applicants from diverse academic backgrounds. Preference will be given to those with one or more of the following experiences:</p>
+<ul>
+<li>Research experience in Linguistics, Psychology, or Neuroscience;</li>
+<li>Research experience with large language models (e.g., GPT, BERT, LLaMA), including model deployment, fine-tuning, prompt engineering, and embedding analysis;</li>
+<li>Solid research skills in Data Science, Machine Learning, Deep Learning, or Natural Language Processing.</li>
+</ul>
+<h3 id="positions-and-eligibility">Positions and Eligibility</h3>
+<p>◆ Postdoctoral Researcher (CUHK Shenzhen Research Institute)</p>
+<ul>
+<li>In good physical health, with a PhD degree obtained within the past three years;</li>
+<li>Must be fully committed to postdoctoral research work. Sponsored or in-service personnel (e.g., military) must provide documentation proving permission for full-time research;</li>
+<li>In-service personnel may not conduct postdoctoral research part-time, and the host institution may not recruit its own former employees as postdocs;</li>
+<li>Preference will be given to applicants who have received doctoral excellence awards, hold authorized invention patents, or have participated in national/provincial major research projects.</li>
+</ul>
+<p>◆ Postdoctoral Researcher (CUHK Main Campus)</p>
+<ul>
+<li>No specific age or employment status restrictions;</li>
+<li>PhD degree in relevant fields (e.g., NLP, Machine Learning, Linguistics, Cognitive Science);</li>
+<li>Capable of conducting independent research and willing to participate in interdisciplinary collaboration.</li>
+</ul>
+<p>◆ Research Assistant (CUHK Main Campus)</p>
+<ul>
+<li>Bachelor’s degree or above in a relevant discipline;</li>
+<li>Familiarity with NLP, Machine Learning, Linguistics, or Cognitive Science methods;</li>
+<li>Candidates with strong programming, modeling, or experimental design skills will be preferred.</li>
+</ul>
+<h3 id="compensation-and-benefits">Compensation and Benefits</h3>
+<ul>
+<li>Flexible start date (the sooner, the better);</li>
+<li>The initial appointment period is one year (reviewed annually) and may be continuously renewed.</li>
+<li>Salary will follow CUHK standards, with pension and medical insurance benefits provided.</li>
+</ul>
+<h3 id="application-procedure">Application Procedure</h3>
+<p>Please send your CV (in PDF format) to:
+zhenguangcai@cuhk.edu.hk, zihaofu@cuhk.edu.hk
+CC: xufeng.duan@link.cuhk.edu.hk
+Email subject should be in the format: “Position Applied + Name + Research Area”.</p>
+<h2 id="">招纳贤士 | 博士后研究员及研究助理招聘</h2>
+<p>香港中文大学语言学及现代语言系语言处理实验室（Language Processing Lab, Department of Linguistics and Modern Languages, CUHK）现面向全球诚聘博士后研究员与研究助理，加入我们正在开展的多个<strong>大语言模型（LLM）× 语言学 / 心理学 / 神经科学 / AI伦理</strong>交叉研究项目。</p>
+<p>本项目组由多位在自然语言处理、语言学、认知科学及人工智能伦理等领域活跃的学者联合指导，致力于探索大语言模型的可解释性机制、语言与认知之间的关系等领域，并开展相关的理论分析、系统开发与实验验证工作。</p>
+<h3 id="-2">实验室介绍</h3>
+<p>Zhenguang Cai (蔡振光)，香港中文大学教授，语言处理实验室PI。毕业于爱丁堡大学，获得心理学博士学位，曾获英国经济及社会科学委员会“未来研究领军”的项目资助。研究方向为语言产生的认知机制、语言模型的行为机制与可解释性等。</p>
+<p>Zihao Fu (付子豪), 香港中文大学研究助理教授。毕业于香港中文大学，曾在牛津大学互联网学院与剑桥大学语言处理实验室从事大语言模型与自然语言处理相关研究。研究方向涵盖大语言模型的微调、可解释性分析以及算法公正性等。</p>
+<h3 id="-3">研究背景</h3>
+<p>我们欢迎来自不同学科背景的申请人，具备以下研究经验之一者将获得优先考虑：
+语言学、心理学或神经科学相关研究经验；
+大语言模型（如GPT、BERT、Llama等）相关科研经验，包括模型部署、微调、提示词工程、词嵌入分析等；
+数据科学、机器学习、深度学习或自然语言处理等领域的扎实研究能力。</p>
+<h3 id="-4">岗位设置与申请条件</h3>
+<p>◆ 博士后研究员（CUHK深圳研究院）</p>
+<ul>
+<li>身体健康，已获得博士学位且不超过三年；</li>
+<li>需全职投入博士后研究工作。定向委培人员、现役军人需提供单位同意其脱产进行博士后研究的证明材料；</li>
+<li>在职人员不得兼职进行博士后研究，且培养单位不得招收本单位原聘用工作的博士；</li>
+<li>曾获优秀博士奖励、拥有发明专利授权、或参与国家/省部级重大项目的申请者优先。</li>
+</ul>
+<p>◆ 博士后研究员（CUHK本部）</p>
+<ul>
+<li>无特定年龄或在职要求；</li>
+<li>拥有相关领域博士学位（如：自然语言处理、机器学习、语言学、认知科学等）；</li>
+<li>具有独立科研能力，并愿意参与跨学科合作。</li>
+</ul>
+<p>◆ 研究助理（CUHK本部）</p>
+<ul>
+<li>拥有相关专业本科或以上学位；</li>
+<li>熟悉自然语言处理、机器学习、语言学或认知科学相关方法；</li>
+<li>具备良好的编程、建模或实验设计能力者优先。</li>
+</ul>
+<h3 id="-5">岗位待遇</h3>
+<ul>
+<li>聘用起始时间灵活（越早越好）；</li>
+<li>初始聘期为一年（每年审查），可持续续约；</li>
+<li>薪酬按香港中文大学标准发放，并提供养老金及医疗保险。</li>
+<li>研究助理 14 ~ 18k HKD/月, 博士后 28 ~ 36k HKD/月（深圳和香港待遇类似）。</li>
+</ul>
+<h3 id="-6">申请方式</h3>
+<p>请将简历（PDF格式）发送至：
+zhenguangcai@cuhk.edu.hk, zihaofu@cuhk.edu.hk
+并抄送: xufeng.duan@link.cuhk.edu.hk
+邮件主题请注明“申请岗位 + 姓名 + 研究方向”。</p>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer class="flex justify-center o-50">
+			<p><em>Built with <a href="https://www.11ty.dev/">Eleventy v3.0.0</a></em></p>
+		</footer>
+
+    <script>
+      function speak() {
+  const utterance = new SpeechSynthesisUtterance('子豪,付')
+  utterance.lang = 'zh-CN'
+  window.speechSynthesis.speak(utterance)
+};
+
+      (()=>{
+        var btn = document.createElement('button');
+        btn.innerHTML = '⬆️';
+        btn.style.position = 'fixed';
+        btn.style.bottom = '20px';
+        btn.style.right = '20px';
+        btn.style.display = 'none';
+        document.body.appendChild(btn);
+
+        btn.addEventListener('click', function() {
+          var anchor = document.querySelector('heading-anchors')
+          if (anchor) {
+              anchor.scrollIntoView({ behavior: 'smooth' })
+          }
+        });
+        
+        window.addEventListener('scroll', function(){
+            var show = window.scrollY > 200;
+            btn.style.display = show ? 'block' : 'none';
+        });
+      })();
+    </script>
+	</body>
+</html>

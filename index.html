@@ -1,105 +1,344 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>Zihao Fu</title><meta name="author" content="Zihao Fu"><link rel="shortcut icon" href="/imgs/ox.svg"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><meta name="generator" content="Hexo 6.2.0"></head><body><header id="page_header"><div class="header_wrap"><div id="blog_name"><a class="blog_title" id="site-name" href="/">Zihao Fu</a></div><button class="menus_icon"><div class="navicon"></div></button><ul class="menus_items"><li class="menus_item"><a class="site-page" href="/#Education"> Education</a></li><li class="menus_item"><a class="site-page" href="/#Publications"> Publications</a></li><li class="menus_item"><a class="site-page" href="/#Service"> Service</a></li><li class="menus_item"><a class="site-page" href="/#Teaching"> Teaching</a></li><li class="menus_item"><a class="site-page" href="/#Projects"> Projects</a></li></ul></div></header><main id="page_main"><div class="side-card sticky"><div class="card-wrap" itemscope itemtype="http://schema.org/Person"><div class="author-avatar"><img class="avatar-img" src="/imgs/profile.jpg" onerror="this.onerror=null;this.src='/imgs/profile.jpg'" alt="avatar"></div><div class="author-discrip"><h3>Zihao Fu</h3><p class="author-bio">University of Oxford</p></div><div class="author-links"><button class="btn m-social-links">Links</button><ul class="social-icons"><li><a class="social-icon" href="https://twitter.com/fuzihaofzh" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li><li><a class="social-icon" href="https://github.com/fuzihaofzh" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li><li><a class="social-icon" href="https://scholar.google.com/citations?user=64CHB2YAAAAJ&amp;hl=en" target="_blank"><i class="fas fa-graduation-cap" aria-hidden="true"></i></a></li><li><a class="social-icon" href="mailto:xxxxxxx" target="_blank"><i class="fas fa-envelope" aria-hidden="true"></i></a></li></ul></div></div></div><div class="page" itemscope itemtype="http://schema.org/CreativeWork"><article><style>
-    img{
-        position: relative;
-        top: 5px;
-    }
-    .author-discrip{
-        text-align: center;
-    }
-    .author-links{
-        text-align: center;
-    }
-    h1{
-        color: #990000
-    }
-    body, header, a {
-        font-family: "Arial", "Helvetica", sans-serif;
-    }
-</style>
-
-<script>
-    function speakName() {
-        const utterance = new SpeechSynthesisUtterance("子豪      付");
-        utterance.lang = "zh-CN"; 
-        window.speechSynthesis.speak(utterance);
-    }
-    var desc = document.getElementsByClassName('author-discrip')[0];
-    desc.innerHTML = "";
-
-    var container = document.createElement("div");
-    var myname = document.createElement("h3");
-    myname.innerText = "Zihao Fu";
-    myname.style.display = "inline"
-    container.appendChild(myname);
-
-
-    var speakButton = document.createElement("button");
-    speakButton.innerHTML = " 🔊";
-    speakButton.style.margin = "0";
-    speakButton.style.border = "none";
-    speakButton.style.display = "inline";
-    speakButton.style.verticalAlign = "middle"; 
-    speakButton.style.padding = "0"; 
-    speakButton.style.cursor = "pointer"; 
-    speakButton.onclick = speakName;
-    container.appendChild(speakButton);
-
-    var affiliation = document.createElement("p");
-    affiliation.innerHTML = "<b>The Chinese University of Hong Kong</b> (Research Assistant Professor) <br> <b>University of Cambridge</b> (Affiliated Lecturer)";
-    container.appendChild(affiliation);
-
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Zihao Fu</title>
+		<meta name="description" content="I am writing about my experiences as a naval navel-gazer.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Eleventy Base Blog v9">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css">
+    <link rel="stylesheet" href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css" integrity="sha256-TBe0l9PhFaVR3DwHmA2jQbUf1y6yQ22RBgJKKkNkC50=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/brands.min.css" integrity="sha256-lvqQzfgRxG8QBB5QMqpZGrljg5T/hNmC3vC7i3zntlI=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/solid.min.css" integrity="sha256-ETbOOM9U8WfaXg2AkW2t+QbdpWYFRAO+HEXOth8EQbY=" crossorigin="anonymous">
+    <style>.main-container {
+  position: relative;
+}
+.main-content {
+  width: auto;
+  margin: 0;
+  padding: 1rem;
+}
+.namecard {
+  width: auto;
+  position: static;
+  padding: 1rem;
+}
+@media (width > 600px) {
+  .cf {
+    display: flex;
+    flex-direction: row;
+  }
+  .namecard {
+    position: sticky;
+    top: 0;
+    float: left;
+    min-width: 15rem;
+    width: 20%;
+  }
+  .main-content {
+    margin-left: max(15rem, 20%);
+  }
+}
+.namecard-container{
+  margin-top: 2rem;
+  line-height: 1.2;
+  font-size: 14px;
+}
+.avatar {
+  width: calc(100% - 1rem);
+  margin: 0 auto;
+  max-width: 15rem;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.avatar img {
+  display: block;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+.ref-links>ul {
+  padding: 0;
+  margin-top: 2rem;
+}
+.ref-links>ul>li {
+  list-style: none;
+  display: inline-block;
+}
+.opacity-and-small{
+  opacity: 0.3;
+  font-size: .7rem;
+}
+.copy-btn{
+  border-radius: 0.3rem;
+  padding: 0.5rem 0;
+}
+.copy-btn:hover{
+  padding: 0.5rem;
+  margin: 0 -0.5rem;
+  color: var(--color-ex-light);
+  background-color: var(--primary-color);
+}</style>
+    <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js" integrity="sha256-PtHu0lJIiSHfZeNj1nFd6wTX+Squ255SGZ/fc8seCtM=" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
     
-    var mail = document.createElement("p");
-    mail.innerHTML = "&#122;&#105;&#104;&#97;&#111;&#102;&#117;&#64;&#99;&#117;&#104;&#107;&#46;&#101;&#100;&#117;&#46;&#104;&#107;";
-    mail.style="display:inline"
+      <nav class="w-100 mb2 mt4">
+  <ul class="list pa0 ma0 flex flex-column flex-row-ns justify-center items-center">
+    <li class="pa2"><a class="link f5 fw6" href="#education-research">Education & Research</a></li>
+    <li class="pa2"><a class="link f5 fw6" href="#work">Work</a></li>
+    <li class="pa2"><a class="link f5 fw6" href="#publications">Publications</a></li>
+    <li class="pa2"><a class="link f5 fw6" href="#invited-talks">Invited Talks</a></li>
+    <li class="pa2"><a class="link f5 fw6" href="#service">Service</a></li>
+    <li class="pa2"><a class="link f5 fw6" href="#teaching">Teaching</a></li>
+  </ul>
+</nav>
+    
+		</header>
 
-    var copyButton = document.createElement("button");
-    copyButton.innerHTML = " 📋";
-    copyButton.style.margin = "0";
-    copyButton.style.border = "none";
-    copyButton.style.display = "inline"; 
-    copyButton.style.verticalAlign = "middle";
-    copyButton.style.padding = "0"; 
-    copyButton.style.cursor = "pointer"; 
-
-    copyButton.onclick = function() {
-        var textToCopy = mail.innerText;
-        navigator.clipboard.writeText(textToCopy);
-    };
-
-    container.appendChild(mail);
-    container.appendChild(copyButton);
-    desc.appendChild(container);
-
-    document.getElementsByClassName('social-icon')[3].href = "mailto:" + mail.innerText;
-    var title = document.getElementById('blog_name');
-    const height = title.offsetHeight / 1.;
-    //title.removeChild(title.firstChild);
-    title.firstChild.innerText = "";
-    var tlogo = document.createElement("img");
-    tlogo.src = "https://upload.wikimedia.org/wikipedia/commons/2/2f/University_of_Oxford.svg";
-    tlogo.height = height;
-    title.firstChild.appendChild(tlogo);
+		<main id="skip" x-init="console.log('main init...')">
+			<heading-anchors>
+				
 
 
-    var cardWrap = document.querySelector(".side-card");
-    cardWrap.style.width = "20%";
-    var mainpage = document.querySelector(".page");
-    mainpage.style.width = "77%";
-</script>
-<p><a href="https://fuzihaofzh.github.io/blog/"></a><br><a target="_blank" rel="noopener" href="https://www.languagesciences.cam.ac.uk/staff/dr-zihao-fu"></a></p>
-<!--https://www.infectiousdisease.cam.ac.uk/user-->
-<p><a target="_blank" rel="noopener" href="https://www.infectiousdisease.cam.ac.uk/staff/zihao-fu"></a><br><a target="_blank" rel="noopener" href="https://www.c2d3.cam.ac.uk/directory/35731/dr-zihao-fu"></a></p>
-<h1 id="Zihao-Fu-付子豪"><a href="#Zihao-Fu-付子豪" class="headerlink" title="Zihao Fu (付子豪)"></a>Zihao Fu (付子豪)</h1><p>I am currently a Research Assistant Professor at The Chinese University of Hong Kong, conducting research on large language models and natural language processing, with a particular focus on interdisciplinary studies involving linguistics, psychology, and fairness. Additionally, I serve as an Affiliated Lecturer at the <a target="_blank" rel="noopener" href="https://ltl.mmll.cam.ac.uk/">Language Technology Lab (LTL)</a> at the University of Cambridge. Before that I was a Postdoc Researcher in <a target="_blank" rel="noopener" href="https://www.oii.ox.ac.uk/">Oxford Internet Institute</a>, University of Oxford collaborating with Prof. <a target="_blank" rel="noopener" href="https://www.oii.ox.ac.uk/people/profiles/chris-russell/">Chris Russell</a>, Prof. <a target="_blank" rel="noopener" href="https://www.oii.ox.ac.uk/people/profiles/brent-mittelstadt/">Brent Mittelstadt</a>, and Prof. <a target="_blank" rel="noopener" href="https://www.oii.ox.ac.uk/people/profiles/sandra-wachter">Sandra Wachter</a>. Previously, I was a Research Associate in <a target="_blank" rel="noopener" href="https://ltl.mmll.cam.ac.uk/">LTL</a>, University of Cambridge working with Prof. <a target="_blank" rel="noopener" href="https://www.mmll.cam.ac.uk/nhc30">Nigel Collier</a>. My research mainly focuses on Natural Language Processing, Large Language Model, Text Generation, Machine Learning, Biomedical Applications, LLM Policy and etc. Before I came to Cambridge, I received my Ph.D. degree from The Chinese University of Hong Kong under the supervision of Prof. <a target="_blank" rel="noopener" href="http://www.se.cuhk.edu.hk/people/academic-staff/prof-lam-wai/">Wai Lam</a>. I have also been a visiting student at the NLP Lab of Tsinghua University, working with Prof. <a target="_blank" rel="noopener" href="http://nlp.csai.tsinghua.edu.cn/~lzy/">Zhiyuan Liu</a>. Before I started my Ph.D. study, I have three years of experience in developing large-scale distributed parallel algorithms for the <a target="_blank" rel="noopener" href="https://www.alibabacloud.com/help/zh/machine-learning-platform-for-ai">PAI</a> platform in <a target="_blank" rel="noopener" href="https://www.alibabacloud.com/">Alibaba Cloud</a>.</p>
-<h2><span style="color: red; font-weight: bold;">Our group is hiring postdoctoral researchers and research assistants at CUHK and CUHK (Shenzhen). Check the <a href="hiring">details</a>.</span></h2>
+<div class="main-container">
+  <div class="namecard">
+  
 
-<h1 id="Education-amp-Research"><a href="#Education-amp-Research" class="headerlink" title="Education &amp; Research"></a>Education &amp; Research</h1><p> <a target="_blank" rel="noopener" href="https://www.ox.ac.uk/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Uni_Oxford_logo.svg" alt="drawing" width="22"/></a>  <span style="color:#839496">2024–Now</span>      PostDoc      <strong>University of Oxford</strong>, Oxford Internet Institute<br> <a target="_blank" rel="noopener" href="https://www.cam.ac.uk/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Coat_of_Arms_of_the_University_of_Cambridge.svg/410px-Coat_of_Arms_of_the_University_of_Cambridge.svg.png" alt="drawing" width="20"/></a>  <span style="color:#839496">2021–2024</span>      PostDoc      <strong>University of Cambridge</strong>, Language Technology Lab, Advisor: Prof. <a target="_blank" rel="noopener" href="https://www.mmll.cam.ac.uk/nhc30">Nigel Collier</a><br><a target="_blank" rel="noopener" href="https://www.cuhk.edu.hk/english/index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Emblem_of_CU.png/607px-Emblem_of_CU.png" alt="drawing" width="30"/></a>  <span style="color:#839496">2017–2021</span>      Ph.D.           <strong>The Chinese University of Hong Kong</strong>, Department of Systems Engineering and Engineering Management, Advisor: Prof. <a target="_blank" rel="noopener" href="http://www.se.cuhk.edu.hk/people/academic-staff/prof-lam-wai/">Wai Lam</a><br><a target="_blank" rel="noopener" href="https://ev.buaa.edu.cn/"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Beihang_University_logo.svg/600px-Beihang_University_logo.svg.png?20231123061853" alt="drawing" width="26"/></a>  <span style="color:#839496">2012–2015</span>      M. E.           <strong>Beihang University</strong>, National Laboratory for Aeronautics and Astronautics, Advisor: Prof. <a target="_blank" rel="noopener" href="http://dept3.buaa.edu.cn/info/1203/2927.htm">Guanghong Gong</a><br><a target="_blank" rel="noopener" href="https://ev.buaa.edu.cn/"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Beihang_University_logo.svg/600px-Beihang_University_logo.svg.png?20231123061853" alt="drawing" width="26"/></a>  <span style="color:#839496">2008–2012</span>      B. E.            <strong>Beihang University</strong>, School of Automation Science and Electrical Engineering</p>
-<h1 id="Work"><a href="#Work" class="headerlink" title="Work"></a>Work</h1><p><a target="_blank" rel="noopener" href="https://www.alibabacloud.com/en"><img src="https://img.alicdn.com/tfs/TB1ugg7M9zqK1RjSZPxXXc4tVXa-32-32.png" alt="drawing" width="20"/></a>  <span style="color:#839496">2015–2017</span>      Machine Learning Algorithm Engineer          IDST, Alibaba Cloud</p>
-<h1 id="Publications"><a href="#Publications" class="headerlink" title="Publications"></a>Publications</h1><p>Eoin Delaney, <strong>Zihao Fu</strong>, Sandra Wachter, Brent Mittelstadt, Chris Russell <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2407.13710">OxonFair: A Flexible Toolkit for Algorithmic Fairness</a> (NeurIPS 2024)<br><strong>Zihao Fu</strong>, Meiru Zhang, Zaiqiao Meng, Yannan Shen, David Buckeridge, Nigel Collier. <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2305.14480">BAND: Biomedical Alert News Dataset</a>. The 38th AAAI Conference on Artificial Intelligence (AAAI 2024).<br><strong>Zihao Fu</strong>, Anthony Man-Cho So, Nigel Collier. <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2301.09820">A Stability Analysis of Fine-Tuning a Pre-Trained Model</a>. PrePrint<br><strong>Zihao Fu</strong>, Wai Lam, Qian Yu, Anthony Man-Cho So, Shengding Hu, Zhiyuan Liu, Nigel Collier. <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2304.04052">Decoder-Only or Encoder-Decoder? Interpreting Language Model as a Regularized Encoder-Decoder</a>. PrePrint<br><strong>Zihao Fu</strong>, Yixuan Su, Zaiqiao Meng, Nigel Collier. <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2305.13066">Biomedical Named Entity Recognition via Dictionary-based Synonym Generalization</a>. The 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP 2023).<br><strong>Zihao Fu</strong>, Haoran Yang, Anthony Man-Cho So, Wai Lam, Lidong Bing, Nigel Collier. <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2211.15583">On the Effectiveness of Parameter-Efficient Fine-Tuning</a>. The 37th AAAI Conference on Artificial Intelligence (AAAI 2023).<br><strong>Zihao Fu</strong>. <a target="_blank" rel="noopener" href="https://www.proquest.com/docview/2652954989?pq-origsite=gscholar&fromopenview=true">Open Domain Text Generation</a>. (PhD Thesis, The Chinese University of Hong Kong, 2021).<br><strong>Zihao Fu</strong>, Wai Lam, Anthony Man-Cho So, Bei Shi. <a target="_blank" rel="noopener" href="https://ojs.aaai.org/index.php/AAAI/article/view/17520/17327">A Theoretical Analysis of the Repetition Problem in Text Generation</a>. The 35th AAAI Conference on Artificial Intelligence (AAAI 2021).<br><strong>Zihao Fu</strong>, Lidong Bing, Wai Lam. <a target="_blank" rel="noopener" href="https://ojs.aaai.org/index.php/AAAI/article/view/6278/6134">Open Domain Event Text Generation</a>. The 34th AAAI Conference on Artificial Intelligence (AAAI 2020).<br><strong>Zihao Fu</strong>, Bei Shi, Wai Lam, Lidong Bing, Zhiyuan Liu. <a target="_blank" rel="noopener" href="https://aclanthology.org/2020.emnlp-main.738.pdf">Partially-Aligned Data-to-Text Generation with Distant Supervision</a>. The 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP 2020).<br><strong>Zihao Fu</strong>, Lidong Bing, Wai Lam, Shoaib Jameel. <a target="_blank" rel="noopener" href="https://aclanthology.org/2020.coling-main.215.pdf">Dynamic Topic Tracker for KB-to-Text Generation</a>. The 28th International Conference on Computational Linguistics (COLING 2020).<br><strong>Zihao Fu</strong>, Bei Shi, Lidong Bing, Wai Lam. <a target="_blank" rel="noopener" href="https://aclanthology.org/2020.aacl-main.29.pdf">Unsupervised KB-to-Text Generation with Auxiliary Triple Extraction using Dual Learning</a>. The 1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 10th International Joint Conference on Natural Language Processing (AACL-IJCNLP 2020).<br><strong>Zihao Fu</strong>, Yankai Lin, Zhiyuan Liu, Wai Lam. <a target="_blank" rel="noopener" href="https://aclanthology.org/N19-1297.pdf">Fact Discovery from Knowledge Base via Facet Decomposition</a>. The 2019 Conference of the North American Chapter of the Association for Computational Linguistics - Human Language Technologies (NAACL-HLT 2019).<br>Shoaib Jameel, <strong>Zihao Fu</strong>, Bei Shi, Wai Lam, Steven Schockaert. <a target="_blank" rel="noopener" href="https://ojs.aaai.org/index.php/AAAI/article/view/4624/4502">Word Embedding as Maximum A Posteriori  Estimation</a>. The 33rd AAAI Conference on Artificial Intelligence (AAAI 2019).<br>Bei Shi, <strong>Zihao Fu</strong>, Lidong Bing, Wai Lam. <a target="_blank" rel="noopener" href="https://aclanthology.org/P18-1232.pdf">Learning Domain-Sensitive and Sentiment-Aware Word Embeddings</a>. The 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018).<br>Guo, Tszhang, Bowen Li, <strong>Zihao Fu</strong>, Tao Wan and Zengchang Qin. Learning Sentimental Weights of Mixed-gram Terms for Classification and Visualization. Pacific Rim International Conferences on Artificial Intelligence (PRICAI 2016).<br>Yanan Zhou, <strong>Zihao Fu</strong>, Guanghong Gong. Pilot Behavior Modeling Using LSTM Network: A Case Study. Asian Simulation Conference (ASC 2016).<br><strong>Zihao Fu</strong>, Guanghong Gong. Explicit moment integration algorithm and its application. Journal of Beijing University of Aeronautics and Astronautics (JBUAA 2015).<br><strong>Zihao Fu</strong>. Research on the Optimization Methods of the Blended-Wing-Body Aircraft. (Master Thesis 2015).</p>
-<h1 id="Invited-Talks"><a href="#Invited-Talks" class="headerlink" title="Invited Talks"></a>Invited Talks</h1><p>Introduction to Large Language Model: Technology, Challenges, and Prospects. CSSA Cambrige. 2023. <a href="/attachment/LargeLanguageModel-Technology,Challenges,andProspects.pdf">[Slide]</a></p>
+
+
+
+<div class="namecard-container">
+  <div class="avatar-container">
+    <div class="avatar">
+      <img src="/imgs/avatar.jpg" alt="avatar" id="avatar">
+    </div>
+    <div class="mt1 mb3 pointer" x-init="console.log('name init')" @click="speak();">
+      <h1 class="flex items-center justify-center f3" id="zihao-fu">
+        <span class="pr2">Zihao Fu</span> 
+        <i class="bx bx-volume-full"></i>
+      </h1>
+    </div>
+  </div>
+  <div class="tj pt2">
+    <div class="tj f6 mt2">
+      <p>
+        </p><div>
+          <i class="bx bxs-bank"></i>
+          <b>The Chinese University of Hong Kong</b>
+        </div>
+        <div class="light-text">Research Assistant Professor</div>
+      <p></p>
+      <p>
+        </p><div>
+          <i class="bx bxs-bank"></i>
+          <b>University of Cambridge</b>
+        </div>
+        <div class="light-text">Affiliated Lecturer</div>
+      <p></p>
+    </div>
+    <div class="flex justify-between pointer copy-btn" x-data="{mail: atob('emloYW9mdUBjdWhrLmVkdS5oaw==')}" @click="(e)=>navigator.clipboard.writeText(mail) && console.log('copied')">
+      <span x-text="mail"></span>
+      <i class="bx bxs-copy"></i>
+    </div>
+  </div>
+  <div class="ref-links">
+    <ul class="flex justify-center items-center pa0 ma0 f3">
+      <li>
+        <a class="pa1 mh1 br3" href="https://twitter.com/fuzihaofzh" target="_blank">
+          <i class="bxl bx-twitter"></i>
+        </a>
+      </li>
+      <li class="p2">
+        <a class="pa1 mh1 br3" href="https://github.com/fuzihaofzh" target="_blank">
+          <i class="bxl bx-github"></i>
+        </a>
+      </li>
+      <li class="p2">
+        <a class="pa1 mh1 br3" href="https://scholar.google.com/citations?user=64CHB2YAAAAJ&amp;hl=en" target="_blank">
+          <i class="bx bxs-education"></i>
+        </a>
+      </li>
+      <li class="p2">
+        <a class="pa1 mh1 br3" href="mailto:zihaofu@cuhk.edu.hk" target="_blank">
+          <i class="bx bxs-envelope"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="ref-links">
+    <ul class="opacity-and-small">
+      <li><a class="e-social-link" href="https://scholar.google.com/citations?user=64CHB2YAAAAJ&amp;hl=en" target="_blank">
+      <span>GoogleScholar</span></a></li>
+      <li><a class="e-social-link" href="https://fuzihaofzh.github.io/blog/" target="_blank">
+      <span>GithubPage</span></a></li>
+      <li><a class="e-social-link" href="https://www.c2d3.cam.ac.uk/directory/35731/dr-zihao-fu" target="_blank">
+      <span>C2D3</span></a></li>
+      <li><a class="e-social-link" href="https://www.languagesciences.cam.ac.uk/staff/dr-zihao-fu" target="_blank">
+      <span>LanguageSciences</span></a></li>
+      <li><a class="e-social-link" href="https://www.infectiousdisease.cam.ac.uk/staff/zihao-fu" target="_blank">
+      <span>InfectiousDisease</span></a></li>
+    </ul>
+  </div>
+</div>
+  </div>
+
+  <div class="main-content tj">
+  <h1 id="zihao-fu-2">Zihao Fu <span class="small-tips">(付子豪)</span></h1>
+<p>I am currently a Research Assistant Professor at The Chinese University of Hong Kong, conducting research on large language models and natural language processing, with a particular focus on interdisciplinary studies involving linguistics, psychology, and fairness. Additionally, I serve as an Affiliated Lecturer at the <a href="https://ltl.mmll.cam.ac.uk/">Language Technology Lab (LTL)</a> at the University of Cambridge. Before that I was a Postdoc Researcher in <a href="https://www.oii.ox.ac.uk/">Oxford Internet Institute</a>, University of Oxford collaborating with Prof. <a href="https://www.oii.ox.ac.uk/people/profiles/chris-russell/">Chris Russell</a>, Prof. <a href="https://www.oii.ox.ac.uk/people/profiles/brent-mittelstadt/">Brent Mittelstadt</a>, and Prof. <a href="https://www.oii.ox.ac.uk/people/profiles/sandra-wachter">Sandra Wachter</a>. Previously, I was a Research Associate in <a href="https://ltl.mmll.cam.ac.uk/">LTL</a>, University of Cambridge working with Prof. <a href="https://www.mmll.cam.ac.uk/nhc30">Nigel Collier</a>.</p>
+<p>My research mainly focuses on Natural Language Processing, Large Language Model, Text Generation, Machine Learning, Biomedical Applications, LLM Policy and etc. Before I came to Cambridge, I received my Ph.D. degree from The Chinese University of Hong Kong under the supervision of Prof. <a href="http://www.se.cuhk.edu.hk/people/academic-staff/prof-lam-wai/">Wai Lam</a>. I have also been a visiting student at the NLP Lab of Tsinghua University, working with Prof. <a href="http://nlp.csai.tsinghua.edu.cn/~lzy/">Zhiyuan Liu</a>. Before I started my Ph.D. study, I have three years of experience in developing large-scale distributed parallel algorithms for the <a href="https://www.alibabacloud.com/help/zh/machine-learning-platform-for-ai">PAI</a> platform in <a href="https://www.alibabacloud.com/">Alibaba Cloud</a>.</p>
+<p style="color:red;font-size:1.5rem;">Our group is hiring postdoctoral researchers and research assistants at CUHK and CUHK (Shenzhen). Check the <a href="/posts/2025-hire-detail">details</a>.</p>
+<h2 id="education-and-research">Education &amp; Research</h2>
+<table id="table-edu">
+  <tr>
+    <td><a href="https://www.ox.ac.uk/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Uni_Oxford_logo.svg" alt="Oxford" width="22"></a></td>
+    <td>2024-Now</td>
+    <td>PostDoc</td>
+    <td><b>University of Oxford</b>, Oxford Internet Institute</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.cam.ac.uk/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Coat_of_Arms_of_the_University_of_Cambridge.svg/410px-Coat_of_Arms_of_the_University_of_Cambridge.svg.png" alt="Cambridge" width="20"></a></td>
+    <td>2021-2024</td>
+    <td>PostDoc</td>
+    <td><b>University of Cambridge</b>, Language Technology Lab, 
+    Advisor: <b><a href="https://www.mmll.cam.ac.uk/nhc30">Prof. Nigel Collier</a></b>
+    </td>
+  </tr>
+  <tr>
+    <td><a href="https://www.cuhk.edu.hk/english/index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Emblem_of_CU.png/607px-Emblem_of_CU.png" alt="CUHK" width="30"></a></td>
+    <td>2017-2021</td>
+    <td>Ph.D.</td>
+    <td><b>The Chinese University of Hong Kong</b>, Department of Systems Engineering and Engineering Management, 
+    Advisor: <b><a href="http://www.se.cuhk.edu.hk/people/academic-staff/prof-lam-wai/">Prof. Wai Lam</a></b>
+    </td>
+  </tr>
+  <tr>
+    <td><a href="https://ev.buaa.edu.cn/"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Beihang_University_logo.svg/600px-Beihang_University_logo.svg.png?20231123061853" alt="Beihang" width="26"></a></td>
+    <td>2012-2015</td>
+    <td>M. E.</td>
+    <td><b>Beihang University</b>, National Laboratory for Aeronautics and Astronautics, 
+    Advisor: <b><a href="http://dept3.buaa.edu.cn/info/1203/2927.htm">Prof. Guanghong Gong</a></b>
+    </td>
+  </tr>
+  <tr>
+    <td><a href="https://ev.buaa.edu.cn/"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Beihang_University_logo.svg/600px-Beihang_University_logo.svg.png?20231123061853" alt="Beihang" width="26"></a></td>
+    <td>2008-2012</td>
+    <td>B. E.</td>
+    <td><b>Beihang University</b>, School of Automation Science and Electrical Engineering</td>
+  </tr>
+</table>
+<h2 id="work">Work</h2>
+<table id="table-work">
+  <tr>
+    <td>
+      <a href="https://www.alibabacloud.com/en">
+        <img src="https://img.alicdn.com/tfs/TB1ugg7M9zqK1RjSZPxXXc4tVXa-32-32.png" alt="Alibaba Cloud" width="20">
+      </a>
+    </td>
+    <td>2015-2017</td>
+    <td>
+      Machine Learning Algorithm Engineer
+    </td>
+    <td>
+      <b>IDST</b>, Alibaba Cloud
+    </td>
+  </tr>
+</table>
+<h2 id="publications">Publications</h2>
+<p>Eoin Delaney, <strong>Zihao Fu</strong>, Sandra Wachter, Brent Mittelstadt, Chris Russell <a href="https://arxiv.org/abs/2407.13710">OxonFair: A Flexible Toolkit for Algorithmic Fairness</a> (NeurIPS 2024)</p>
+<p><strong>Zihao Fu</strong>, Meiru Zhang, Zaiqiao Meng, Yannan Shen, David Buckeridge, Nigel Collier. <a href="https://arxiv.org/abs/2305.14480">BAND: Biomedical Alert News Dataset</a>. The 38th AAAI Conference on Artificial Intelligence (AAAI 2024).</p>
+<p><strong>Zihao Fu</strong>, Anthony Man-Cho So, Nigel Collier. <a href="https://arxiv.org/abs/2301.09820">A Stability Analysis of Fine-Tuning a Pre-Trained Model</a>. PrePrint</p>
+<p><strong>Zihao Fu</strong>, Wai Lam, Qian Yu, Anthony Man-Cho So, Shengding Hu, Zhiyuan Liu, Nigel Collier. <a href="https://arxiv.org/abs/2304.04052">Decoder-Only or Encoder-Decoder? Interpreting Language Model as a Regularized Encoder-Decoder</a>. PrePrint</p>
+<p><strong>Zihao Fu</strong>, Yixuan Su, Zaiqiao Meng, Nigel Collier. <a href="https://arxiv.org/abs/2305.13066">Biomedical Named Entity Recognition via Dictionary-based Synonym Generalization</a>. The 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP 2023).</p>
+<p><strong>Zihao Fu</strong>, Haoran Yang, Anthony Man-Cho So, Wai Lam, Lidong Bing, Nigel Collier. <a href="https://arxiv.org/abs/2211.15583">On the Effectiveness of Parameter-Efficient Fine-Tuning</a>. The 37th AAAI Conference on Artificial Intelligence (AAAI 2023).</p>
+<p><strong>Zihao Fu</strong>. <a href="https://www.proquest.com/docview/2652954989?pq-origsite=gscholar&amp;fromopenview=true">Open Domain Text Generation</a>. (PhD Thesis, The Chinese University of Hong Kong, 2021).</p>
+<p><strong>Zihao Fu</strong>, Wai Lam, Anthony Man-Cho So, Bei Shi. <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17520/17327">A Theoretical Analysis of the Repetition Problem in Text Generation</a>. The 35th AAAI Conference on Artificial Intelligence (AAAI 2021).</p>
+<p><strong>Zihao Fu</strong>, Lidong Bing, Wai Lam. <a href="https://ojs.aaai.org/index.php/AAAI/article/view/6278/6134">Open Domain Event Text Generation</a>. The 34th AAAI Conference on Artificial Intelligence (AAAI 2020).</p>
+<p><strong>Zihao Fu</strong>, Bei Shi, Wai Lam, Lidong Bing, Zhiyuan Liu. <a href="https://aclanthology.org/2020.emnlp-main.738.pdf">Partially-Aligned Data-to-Text Generation with Distant Supervision</a>. The 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP 2020).</p>
+<p><strong>Zihao Fu</strong>, Lidong Bing, Wai Lam, Shoaib Jameel. <a href="https://aclanthology.org/2020.coling-main.215.pdf">Dynamic Topic Tracker for KB-to-Text Generation</a>. The 28th International Conference on Computational Linguistics (COLING 2020).</p>
+<p><strong>Zihao Fu</strong>, Bei Shi, Lidong Bing, Wai Lam. <a href="https://aclanthology.org/2020.aacl-main.29.pdf">Unsupervised KB-to-Text Generation with Auxiliary Triple Extraction using Dual Learning</a>. The 1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 10th International Joint Conference on Natural Language Processing (AACL-IJCNLP 2020).</p>
+<p><strong>Zihao Fu</strong>, Yankai Lin, Zhiyuan Liu, Wai Lam. <a href="https://aclanthology.org/N19-1297.pdf">Fact Discovery from Knowledge Base via Facet Decomposition</a>. The 2019 Conference of the North American Chapter of the Association for Computational Linguistics - Human Language Technologies (NAACL-HLT 2019).</p>
+<p>Shoaib Jameel, <strong>Zihao Fu</strong>, Bei Shi, Wai Lam, Steven Schockaert. <a href="https://ojs.aaai.org/index.php/AAAI/article/view/4624/4502">Word Embedding as Maximum A Posteriori  Estimation</a>. The 33rd AAAI Conference on Artificial Intelligence (AAAI 2019).</p>
+<p>Bei Shi, <strong>Zihao Fu</strong>, Lidong Bing, Wai Lam. <a href="https://aclanthology.org/P18-1232.pdf">Learning Domain-Sensitive and Sentiment-Aware Word Embeddings</a>. The 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018).</p>
+<p>Guo, Tszhang, Bowen Li, <strong>Zihao Fu</strong>, Tao Wan and Zengchang Qin. Learning Sentimental Weights of Mixed-gram Terms for Classification and Visualization. Pacific Rim International Conferences on Artificial Intelligence (PRICAI 2016).</p>
+<p>Yanan Zhou, <strong>Zihao Fu</strong>, Guanghong Gong. Pilot Behavior Modeling Using LSTM Network: A Case Study. Asian Simulation Conference (ASC 2016).</p>
+<p><strong>Zihao Fu</strong>, Guanghong Gong. Explicit moment integration algorithm and its application. Journal of Beijing University of Aeronautics and Astronautics (JBUAA 2015).</p>
+<p><strong>Zihao Fu</strong>. Research on the Optimization Methods of the Blended-Wing-Body Aircraft. (Master Thesis 2015).</p>
+<h2 id="invited-talks">Invited Talks</h2>
+<p>Introduction to Large Language Model: Technology, Challenges, and Prospects. CSSA Cambrige. 2023. <a href="/attachment/LargeLanguageModel-Technology,Challenges,andProspects.pdf">[Slide]</a></p>
 <p>Language Model for Science. Cambridge Centre for Data-Driven Discovery. 2023.</p>
-<h1 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h1><p><strong>Reviewer</strong> : AAAI, ACL, EACL, EMNLP, ICASSP, ICDM, ICLR, ICML, NeurIPS, TKDE<br><strong>External Reviewer</strong> : AAAI, CIKM, COLING, EMNLP, ICDM, IJCAI, SIGIR, TACL</p>
-<h1 id="Teaching"><a href="#Teaching" class="headerlink" title="Teaching"></a>Teaching</h1><p><span style="color:#839496">2022–2023</span>  Li18, Computational Linguistics, Guest Lecturer, University of Cambridge<br><span style="color:#839496">2021–2022</span>  FTEC 5510, Advanced Financial Infrastructure, Teaching Assistant, CUHK<br><span style="color:#839496">2020–2021</span>  FTEC 5530, Quantitative and Algorithmic Trading, Teaching Assistant, CUHK<br><span style="color:#839496">2020–2021</span>  ENGG 2780B, Statistics for Engineers, Teaching Assistant, CUHK<br><span style="color:#839496">2020–2020</span>  SEEM 4610, Supply Chain Management, Teaching Assistant, CUHK<br><span style="color:#839496">2017–2020</span>  SEEM 3460, Computer Processing System Concepts, Teaching Assistant, CUHK<br><span style="color:#839496">2017–2019</span>  SEEM 4540, Open Systems for E-Commerce, Teaching Assistant, CUHK</p>
-<h1 id="Course-Notes"><a href="#Course-Notes" class="headerlink" title="Course Notes"></a>Course Notes</h1><p><span style="color:#839496">2019</span> IERG 6300 : Probability Theory. By Prof. Chandra Nair <a target="_blank" rel="noopener" href="https://gitlab.com/fuzihao/attachments/-/raw/main/ZihaoFu-IERG6300.pdf">[My Notes]</a><br><span style="color:#839496">2019</span> SEEM 5380 : Optimization Methods for High-Dimensional Statistics. By Prof. Anthony Man-Cho So <a target="_blank" rel="noopener" href="https://gitlab.com/fuzihao/attachments/-/raw/main/ZihaoFu-SEEM5380.pdf">[My Notes]</a><br><span style="color:#839496">2018</span> IERG 5130 : Probabilistic Models and Inference Algorithms for Machine Learning. By Prof. Dahua Lin <a target="_blank" rel="noopener" href="https://gitlab.com/fuzihao/attachments/-/raw/main/ZihaoFu-IERG5130.pdf">[My Notes]</a><br><span style="color:#839496">2018</span> ENGG 5781 : Matrix Analysis and Computations. By Prof. Wing-Kin (Ken) Ma <a target="_blank" rel="noopener" href="https://gitlab.com/fuzihao/attachments/-/raw/main/ZihaoFu-ENGG5781.pdf">[My Notes]</a><br><span style="color:#839496">2017</span> ENGG 5501 : Foundations of Optimization. By Prof. Anthony Man-Cho So <a target="_blank" rel="noopener" href="https://gitlab.com/fuzihao/attachments/-/raw/main/ZihaoFu-ENGG5501.pdf">[My Notes]</a></p>
-<h1 id="Projects"><a href="#Projects" class="headerlink" title="Projects"></a>Projects</h1><p><a target="_blank" rel="noopener" href="http://biocaster.org/"><img src="https://user-images.githubusercontent.com/1419566/233990692-14b8f495-0d2a-4a8e-bf47-8df4935f6b62.png" width="25"/></a> <a target="_blank" rel="noopener" href="http://biocaster.org/">BioCaster</a> The BioCaster website at the University of Cambridge presents structured information about disease outbreaks, links to Internet news and related knowledge resources to people interested in public health and safety.<br><a target="_blank" rel="noopener" href="https://github.com/fuzihaofzh/PaperArxiv"><img src="https://user-images.githubusercontent.com/1419566/42982474-04dc27b8-8c14-11e8-8a07-a15e6007c6a8.png" alt="drawing" width="30"/></a> <a target="_blank" rel="noopener" href="https://github.com/fuzihaofzh/PaperArxiv">PaperArxiv</a>  A paper management tool that helps to organize the mind. It focuses on taking notes, organizing, and archiving papers.<br><a target="_blank" rel="noopener" href="https://github.com/fuzihaofzh/unillm">unillm</a> An unified large language model interface for ChatGPT, LLaMA(2, 3), Mistral, Claude, RAG, CommandRPlus, and etc.<br><a target="_blank" rel="noopener" href="https://github.com/fuzihaofzh/streamtask">StreamTask</a>  A lightweight python parallel framework for parallelizing the computationally intensive pipelines.<br><a target="_blank" rel="noopener" href="https://github.com/fuzihaofzh/cam-tool">CAM-Tool</a>  A Cloud Assignment Manager tool that helps manage tasks across different machines.<br><a target="_blank" rel="noopener" href="https://github.com/fuzihaofzh/BitTrader">BitTrader</a>  A real-time quantitative crypto coin trading, backtesting, and strategy developing plantform based on <a target="_blank" rel="noopener" href="https://www.backtrader.com/">Backtrader</a>.<br><a target="_blank" rel="noopener" href="https://github.com/fuzihaofzh/cstl">CSTL</a> A C++ STL containers wrapper for python to partially solve the Copy-on-Write issue.<br><a target="_blank" rel="noopener" href="https://greasyfork.org/en/scripts/475352-chatgpthelper">ChatGPTHelper</a> A plugin that automatically saves ChatGPT history and predefined prompts to local disk. This allows us to disable the official history feature, preventing our data from being used in training processes.</p>
-</article></div></main><div class="nav-wrap"><div class="nav"><button class="site-nav"><div class="navicon"></div></button><ul class="nav_items"><li class="nav_item"><a class="nav-page" href="/#Education"> Education</a></li><li class="nav_item"><a class="nav-page" href="/#Publications"> Publications</a></li><li class="nav_item"><a class="nav-page" href="/#Service"> Service</a></li><li class="nav_item"><a class="nav-page" href="/#Teaching"> Teaching</a></li><li class="nav_item"><a class="nav-page" href="/#Projects"> Projects</a></li></ul></div><div class="cd-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div></div><footer id="page_footer"><div class="footer_wrap"><div class="copyright">&copy;2020 - 2025 by Zihao Fu</div><div class="theme-info">Powered by <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a> & <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"></script><script src="/js/main.js"></script></body></html>
+<h2 id="service">Service</h2>
+<p><strong>Reviewer</strong> : AAAI, ACL, EACL, EMNLP, ICASSP, ICDM, ICLR, ICML, NeurIPS, TKDE
+<strong>External Reviewer</strong> : AAAI, CIKM, COLING, EMNLP, ICDM, IJCAI, SIGIR, TACL</p>
+<h2 id="teaching">Teaching</h2>
+<p><span style="color:#839496">2022-2023</span>  Li18, Computational Linguistics, Guest Lecturer, University of Cambridge</p>
+<p><span style="color:#839496">2021-2022</span>  FTEC 5510, Advanced Financial Infrastructure, Teaching Assistant, CUHK</p>
+<p><span style="color:#839496">2020-2021</span>  FTEC 5530, Quantitative and Algorithmic Trading, Teaching Assistant, CUHK</p>
+<p><span style="color:#839496">2020-2021</span>  ENGG 2780B, Statistics for Engineers, Teaching Assistant, CUHK</p>
+<p><span style="color:#839496">2020-2020</span>  SEEM 4610, Supply Chain Management, Teaching Assistant, CUHK</p>
+<p><span style="color:#839496">2017-2020</span>  SEEM 3460, Computer Processing System Concepts, Teaching Assistant, CUHK</p>
+<p><span style="color:#839496">2017-2019</span>  SEEM 4540, Open Systems for E-Commerce, Teaching Assistant, CUHK</p>
+<h2 id="course-notes">Course Notes</h2>
+<p><span style="color:#839496">2019</span> IERG 6300 : Probability Theory. By Prof. Chandra Nair <a href="https://gitlab.com/fuzihao/attachments/-/raw/main/ZihaoFu-IERG6300.pdf">[My Notes]</a></p>
+<p><span style="color:#839496">2019</span> SEEM 5380 : Optimization Methods for High-Dimensional Statistics. By Prof. Anthony Man-Cho So <a href="https://gitlab.com/fuzihao/attachments/-/raw/main/ZihaoFu-SEEM5380.pdf">[My Notes]</a></p>
+<p><span style="color:#839496">2018</span> IERG 5130 : Probabilistic Models and Inference Algorithms for Machine Learning. By Prof. Dahua Lin <a href="https://gitlab.com/fuzihao/attachments/-/raw/main/ZihaoFu-IERG5130.pdf">[My Notes]</a></p>
+<p><span style="color:#839496">2018</span> ENGG 5781 : Matrix Analysis and Computations. By Prof. Wing-Kin (Ken) Ma <a href="https://gitlab.com/fuzihao/attachments/-/raw/main/ZihaoFu-ENGG5781.pdf">[My Notes]</a></p>
+<p><span style="color:#839496">2017</span> ENGG 5501 : Foundations of Optimization. By Prof. Anthony Man-Cho So <a href="https://gitlab.com/fuzihao/attachments/-/raw/main/ZihaoFu-ENGG5501.pdf">[My Notes]</a></p>
+<h2 id="projects">Projects</h2>
+<p><a href="http://biocaster.org/"><img src="https://user-images.githubusercontent.com/1419566/233990692-14b8f495-0d2a-4a8e-bf47-8df4935f6b62.png" width="20"></a> <a href="http://biocaster.org/">BioCaster</a> The BioCaster website at the University of Cambridge presents structured information about disease outbreaks, links to Internet news and related knowledge resources to people interested in public health and safety.</p>
+<p><a href="https://github.com/fuzihaofzh/PaperArxiv"><img src="https://user-images.githubusercontent.com/1419566/42982474-04dc27b8-8c14-11e8-8a07-a15e6007c6a8.png" alt="drawing" width="20"></a> <a href="https://github.com/fuzihaofzh/PaperArxiv">PaperArxiv</a>  A paper management tool that helps to organize the mind. It focuses on taking notes, organizing, and archiving papers.</p>
+<p><a href="https://github.com/fuzihaofzh/unillm">unillm</a> An unified large language model interface for ChatGPT, LLaMA(2, 3), Mistral, Claude, RAG, CommandRPlus, and etc.</p>
+<p><a href="https://github.com/fuzihaofzh/streamtask">StreamTask</a>  A lightweight python parallel framework for parallelizing the computationally intensive pipelines.</p>
+<p><a href="https://github.com/fuzihaofzh/cam-tool">CAM-Tool</a>  A Cloud Assignment Manager tool that helps manage tasks across different machines.</p>
+<p><a href="https://github.com/fuzihaofzh/BitTrader">BitTrader</a>  A real-time quantitative crypto coin trading, backtesting, and strategy developing plantform based on <a href="https://www.backtrader.com/">Backtrader</a>.</p>
+<p><a href="https://github.com/fuzihaofzh/cstl">CSTL</a> A C++ STL containers wrapper for python to partially solve the Copy-on-Write issue.</p>
+<p><a href="https://greasyfork.org/en/scripts/475352-chatgpthelper">ChatGPTHelper</a> A plugin that automatically saves ChatGPT history and predefined prompts to local disk. This allows us to disable the official history feature, preventing our data from being used in training processes.</p>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer class="flex justify-center o-50">
+			<p><em>Built with <a href="https://www.11ty.dev/">Eleventy v3.0.0</a></em></p>
+		</footer>
+
+    <script>
+      function speak() {
+  const utterance = new SpeechSynthesisUtterance('子豪,付')
+  utterance.lang = 'zh-CN'
+  window.speechSynthesis.speak(utterance)
+};
+
+      (()=>{
+        var btn = document.createElement('button');
+        btn.innerHTML = '⬆️';
+        btn.style.position = 'fixed';
+        btn.style.bottom = '20px';
+        btn.style.right = '20px';
+        btn.style.display = 'none';
+        document.body.appendChild(btn);
+
+        btn.addEventListener('click', function() {
+          var anchor = document.querySelector('heading-anchors')
+          if (anchor) {
+              anchor.scrollIntoView({ behavior: 'smooth' })
+          }
+        });
+        
+        window.addEventListener('scroll', function(){
+            var show = window.scrollY > 200;
+            btn.style.display = show ? 'block' : 'none';
+        });
+      })();
+    </script>
+	</body>
+</html>
