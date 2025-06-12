@@ -99,9 +99,9 @@ nav a:hover::after {
 }
 
 #table-edu td:first-child img {
-  width: auto;
-  height: 24px;
-  max-width: 32px;
+  width: auto !important;
+  height: 24px !important;
+  max-width: 32px !important;
   vertical-align: middle;
   object-fit: contain;
 }
@@ -113,9 +113,9 @@ nav a:hover::after {
 }
 
 #table-work td:first-child img {
-  width: auto;
-  height: 24px;
-  max-width: 32px;
+  width: auto !important;
+  height: 24px !important;
+  max-width: 32px !important;
   vertical-align: middle;
   object-fit: contain;
 }
