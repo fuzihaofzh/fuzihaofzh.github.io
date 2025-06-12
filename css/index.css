@@ -92,30 +92,30 @@ nav a:hover::after {
   width: 100%;
 }
 
-#table-edu td:first-child {
+table#table-edu td:first-child {
   width: 40px;
   text-align: center;
   vertical-align: middle;
 }
 
-#table-edu td:first-child img {
+table#table-edu td:first-child img {
   width: auto !important;
   height: 24px !important;
   max-width: 32px !important;
-  vertical-align: middle;
-  object-fit: contain;
+  vertical-align: middle !important;
+  object-fit: contain !important;
 }
 
-#table-work td:first-child {
+table#table-work td:first-child {
   width: 40px;
   text-align: center;
   vertical-align: middle;
 }
 
-#table-work td:first-child img {
+table#table-work td:first-child img {
   width: auto !important;
   height: 24px !important;
   max-width: 32px !important;
-  vertical-align: middle;
-  object-fit: contain;
+  vertical-align: middle !important;
+  object-fit: contain !important;
 }
