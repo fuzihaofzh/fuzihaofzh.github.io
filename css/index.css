@@ -91,3 +91,31 @@ nav a:hover::after {
   left: 0;
   width: 100%;
 }
+
+#table-edu td:first-child {
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#table-edu td:first-child img {
+  width: auto;
+  height: 24px;
+  max-width: 32px;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+#table-work td:first-child {
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#table-work td:first-child img {
+  width: auto;
+  height: 24px;
+  max-width: 32px;
+  vertical-align: middle;
+  object-fit: contain;
+}
