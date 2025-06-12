@@ -54,8 +54,8 @@ h2::before {
 
 main {
   min-height: 100vh;
-  margin-left: 2cm;
-  margin-right: 2cm;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .small-tips {
